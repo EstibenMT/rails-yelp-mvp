@@ -1,0 +1,11 @@
+<h1><%= @restaurant.name %></h1>
+
+<%= link_to "Edit restaurant", edit_restaurant_path %>
+
+<ul class="list-group">
+  <li class="list-group-item"><%= @restaurant.address %></li>
+  <li class="list-group-item"><%= @restaurant.phone_number %></li>
+  <li class="list-group-item"><%= @restaurant.category %></li>
+</ul>
+
+<%= link_to "Back to list", restaurants_path %>

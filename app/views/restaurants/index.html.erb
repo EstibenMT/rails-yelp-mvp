@@ -1,0 +1,10 @@
+<h1>List restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <div>
+    <h2><%= link_to restaurant.name, restaurant_path(restaurant)%></h2>
+    <%= link_to "borrar", restaurant_path(restaurant.id), data: {turbo_method: :delete} %>
+  </div>
+<% end %>
+
+<%= link_to "Add a Restaurant", new_restaurant_path %>

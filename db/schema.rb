@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_14_012539) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_16_003654) do
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_14_012539) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "content"
-    t.float "rating"
+    t.integer "rating"
     t.integer "restaurant_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
